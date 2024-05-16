@@ -1,14 +1,27 @@
 
-# Project Title
+# Projet microservices
 
 Documentation Technique
+
+
+But de projet 🎯 
+
+
+
+![Logo](https://blog.hubspot.com/hs-fs/hubfs/apiendpoint_0.webp?width=650&height=247&name=apiendpoint_0.webp)
+
+Le but du projet est de développer une architecture de microservices pour gérer des équipes et des joueurs dans le contexte d'une application sportive. Cette architecture utilise divers langages et technologies, notamment JavaScript, Protobuf, gRPC, Apache Kafka et MongoDB. Les microservices communiquent entre eux de manière asynchrone pour offrir des performances et une évolutivité optimales. L'API Gateway, les services gRPC et les scripts côté client sont développés en JavaScript. Protobuf est utilisé pour définir les messages échangés entre les services gRPC, tandis que Kafka est utilisé pour la gestion des événements liés aux opérations CRUD sur les équipes. MongoDB est choisi comme base de données pour stocker les informations sur les équipes et les joueurs. Enfin, Thunder ou Postman sont utilisés pour tester les endpoints de l'application.
 
 Langages Utilisés
 
 - JavaScript: Langage principal de programmation utilisé dans ce projet. Utilisé pour le développement de l'API Gateway, des services gRPC et des scripts côté client.
+![Logo](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
 - Protobuf: Utilisé pour définir les messages échangés entre les services gRPC. Fournit une méthode de sérialisation efficace des données structurées.
+![Logo](https://cdn-contents.anymindgroup.com/corporate/wp-uploads/2021/10/06092952/logo.png)
 - gRPC: Utilisé pour la communication entre les différents services, offrant une communication efficace et asynchrone entre les microservices.
+![Logo](https://blog.postman.com/wp-content/uploads/2023/11/What-is-gRPC_.jpg)
 - Apache Kafka: Utilisé pour la gestion des événements liés aux opérations CRUD sur les équipes, permettant une communication asynchrone entre les services.
+![Logo](https://www.ovhcloud.com/sites/default/files/styles/text_media_horizontal/public/2021-09/ECX-1909_Hero_Kafka_600x400%402x-1.png)
 
 Entités
 
@@ -22,7 +35,32 @@ Entités
   - `nom`: Nom du joueur.
   - `poste`: Poste ou position du joueur dans l'équipe.
 
+
+Exigences  techniques
+- VScode (editeur de texte) 📄
+![Logo](https://yt3.googleusercontent.com/_q52i8bUAEvcb7JR4e-eNTv23y2A_wg5sCz0NC0GrGtcw1CRMWJSOPVHUDh_bngD0q4gMvVeoA=s900-c-k-c0x00ffffff-no-rj)
+- Kafka ou Kadeck (communication entre les microservices) 📞 
+
+![Logo](https://i.ytimg.com/vi/O7znCGe0u2s/maxresdefault.jpg)
+- MongoDB (pour la base de données) 💻
+![Logo](https://cdn.ttgtmedia.com/visuals/LeMagIT/hero_article/MongoDB.jpg)
+- Thunder ou Postman (pour le test des Endpoints)
+
+
+
+
+![Logo](https://i0.wp.com/gowthamcbe.com/wp-content/uploads/2022/03/Thunder-Client-Extension.png?resize=597%2C221&ssl=1)
+
+
+
+
+
+![Logo](https://media.licdn.com/dms/image/D4D12AQHF10X190224g/article-cover_image-shrink_600_2000/0/1689958597863?e=2147483647&v=beta&t=CXXhcZRkU_x06HQfuMvnMArsBS3Kbb0Y5Hi3eFhtU8E)
+
+
+
 Endpoints HTTP
+
 
 Equipe
 
@@ -90,7 +128,7 @@ Joueur
 
 
 
-Conclusion
+Conclusion 🚀
 
 La combinaison de JavaScript, gRPC et Apache Kafka offre une architecture robuste et évolutive pour le développement de microservices dans ce projet. Ces technologies permettent une communication efficace, une gestion des flux de données en temps réel et une extensibilité pour répondre aux besoins de l'application.
 
