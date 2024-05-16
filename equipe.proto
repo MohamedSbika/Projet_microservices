@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package equipe;
+
+message Equipe {
+  string id = 1;
+  string nom = 2;
+  string description = 3;
+}
+
+message SearchEquipesRequest {} // Demande de recherche d'équipes
+
+message GetEquipeRequest {
+  string equipe_id = 1; // Identifiant de l'équipe
+}
+
+message GetEquipeResponse {
+  Equipe equipe = 1; // Équipe trouvée
+}
+
+message SearchEquipesResponse {
+  repeated Equipe equipes = 1; // Liste d'équipes
+}
+
+message CreateEquipeRequest {
+  string nom = 1;
+  string description = 2;
+}
+
+message CreateEquipeResponse {
+  Equipe equipe = 1; // Équipe créée
+}
+message deleteEquipeByIdRequest {
+  string equipe_id = 1;
+}
+
+message deleteEquipeByIdResponse {
+  string message = 1;
+}
+
+message updateEquipeByIdRequest {
+  string equipe_id = 1;
+  string nom = 2;
+  string description = 3;
+}
+
+message updateEquipeByIdResponse {
+  Equipe equipe = 1;
+}
+
+service EquipeService {
+  rpc GetEquipe(GetEquipeRequest) returns (GetEquipeResponse);
+  rpc CreateEquipe(CreateEquipeRequest) returns (CreateEquipeResponse);
+  rpc deleteEquipeById(deleteEquipeByIdRequest) returns (deleteEquipeByIdResponse);
+  rpc updateEquipeById(updateEquipeByIdRequest) returns (updateEquipeByIdResponse);
+}

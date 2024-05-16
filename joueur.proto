@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package joueur;
+
+message Joueur {
+  string id = 1;
+  string nom = 2;
+  string poste = 3;
+}
+
+message GetJoueurRequest {
+  string joueur_id = 1;
+}
+
+message GetJoueurResponse {
+  Joueur joueur = 1;
+}
+
+message CreateJoueurRequest {
+  string nom = 1;
+  string poste = 2;
+}
+
+message CreateJoueurResponse {
+  Joueur joueur = 1;
+}
+
+message deleteJoueurByIdRequest {
+  string joueur_id = 1;
+}
+
+message deleteJoueurByIdResponse {
+  string message = 1;
+}
+
+message UpdateJoueurByIdRequest {
+  string joueur_id = 1;
+  string nom = 2;
+  string poste = 3;
+}
+
+message UpdateJoueurByIdResponse {
+  Joueur joueur = 1;
+}
+
+service JoueurService {
+  rpc GetJoueur(GetJoueurRequest) returns (GetJoueurResponse);
+  rpc CreateJoueur(CreateJoueurRequest) returns (CreateJoueurResponse);
+  rpc deleteJoueurById(deleteJoueurByIdRequest) returns (deleteJoueurByIdResponse);
+  rpc updateJoueurById(UpdateJoueurByIdRequest) returns (UpdateJoueurByIdResponse);
+
+}
